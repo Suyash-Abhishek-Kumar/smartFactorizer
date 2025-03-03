@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Factorizer</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>Smart Factorizer</h2>
+    <p>The program prime factorizes the user input number and then compresses each prime factor separately.<br>
+    It also breaks down any prime numbers it encounters while factorizing the original number.<br>
+    Finally, it give the user 3 variants of the answer: +, -, =<br>
+    + means the factorizing added 1 to any new prime factors encountered<br>
+    - means the factorizing subtracted 1 from any new prime factors encountered<br>
+    = means the factorizing added or subtracted 1 to/from any new prime factors encountered based on the coded logic</p>
+    <div class="container">
+        <label for="number">Number to be factorized:</label>
+        <input type="number" id="number" placeholder="Enter conducted hours">
+
+        <button onclick="factorize()">Submit</button>
+    </div>
+    <div class="output">
+        <p id="result">Waiting for input...</p>
+    </div>
+    <div class="credits">
+        <label>By </label>
+        <a href="https://github.com/Suyash-Abhishek-Kumar" target="_blank">Suyash Abhishek Kumar</a>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
