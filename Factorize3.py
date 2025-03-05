@@ -13,12 +13,12 @@ final_factors, factors = [], []
 def home(): return "Flask Backend is Running!"
 
 def is_prime(num):
-        for i in range(2, num // 2):
+        for i in range(2, num // 2 + 1):
             if num % i == 0: return False
         return True
 
 def factor(number):
-    for i in range(2, number // 2):
+    for i in range(2, number // 2 + 1):
         if number % i == 0:
             return i
     else:
