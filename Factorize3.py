@@ -182,22 +182,21 @@ class Factorize:
                     case 2:
                         self.check_required(BEST)
                         final_factors.append(factors.copy())
-            required.append('Required Numbers: {}'.format(", ".join(str(i) for i in sorted(list(self.required)))))
+                        factors.clear()
+            required.append(sorted(list(self.required)))
             self.reset()
             x = x_copy
         return required
 
 @app.route('/factorize', methods=['POST'])
 def run():
+    global final_factors
+    final_factors = []
     data = request.json
+    number = int(data.get("number", 0))
     beltmatic = Factorize()
-    req = beltmatic.run(data)
-    return jsonify({"result": (req, final_factors)})
+    req = beltmatic.run(number)
+    return jsonify({"result": [req, final_factors]})
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
     app.run(debug=True)
-    # beltmatic = Factorize()
-    # req = beltmatic.run(1432)
-    # print(req)
-    # print(final_factors)
