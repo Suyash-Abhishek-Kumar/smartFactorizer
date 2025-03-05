@@ -6,7 +6,7 @@ async function factorize() {
         return;
     }
 
-    let response = await fetch("http://127.0.0.1:5000/factorize", {
+    let response = await fetch("https://smartfactorizer.onrender.com/factorize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ number })
