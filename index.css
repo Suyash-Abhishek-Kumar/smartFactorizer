@@ -54,19 +54,25 @@ button:hover {
 }
 
 .output1 {
-    background: white;
     padding: 0px;
     display: flex;
     flex-direction: space-between;
-    border-radius: 0px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(145, 50, 50, 0.2);
     text-align: center;
-    margin: 5px 0px;
+    margin: 0px 0px;
 }
 
 .output1 p {
+    background: white;
+    border-radius: 10px;
     flex: 1;
     padding: 50px;
-    margin: 0; /* Adjust spacing */
+    margin: 5px 10px; /* Adjust spacing */
     line-height: 1; 
+}
+
+#variant-plus p, #variant-minus p, #variant-equal p {
+    margin: 0px 0;
+    line-height: 0;
 }

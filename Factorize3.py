@@ -28,19 +28,18 @@ def print_factors(lst, last, sub=0):
     lst_new = compress(lst)
     factors.append(lst_new)
     print(last, end=": ")
-    for i in range(len(lst_new) - 1):
-        print(lst_new[i], end=" x ")
     if sub < 0:
-        print(lst_new[-1], end=" ")
-        print("-", abs(sub))
+        # print(lst_new[-1], end=" ")
+        # print("-", abs(sub))
         factors[-1].append(-1)
     elif sub > 0:
-        print(lst_new[-1], end=" ")
-        print("+", sub)
+        # print(lst_new[-1], end=" ")
+        # print("+", sub)
         factors[-1].append(1)
     else:
-        print(lst_new[-1])
-    print(factors)
+        pass
+        # print(lst_new[-1])
+    # print(factors)
 
 def compress(lst):
     new_lst = []
@@ -154,7 +153,6 @@ class Factorize:
                 case 0: method = '+'
                 case 1: method = '-'
                 case _: method = '='
-            print('Variant {}:'.format(method))
             # prime factorization
             if not is_prime(x):
                 while x > 1:

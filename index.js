@@ -53,11 +53,11 @@ function displayFactorization(data) {
             let factors = Array.isArray(factorization1[i]) ? factorization1[i] : [factorization1[i]];
             let add = 0;
             if (factors[factors.length - 1] === -1 || factors[factors.length - 1] === 1) {add = factors.pop(); }
-            if (add == 0){ output1 += `<p>${num1}: ${factors.join(" x ")}</p>`; }
-            if (add == 1){ output1 += `<p>${num1}: ${factors.join(" x ")} + 1</p>`; }
-            if (add == -1){ output1 += `<p>${num1}: ${factors.join(" x ")} - 1</p>`; }
+            if (add == 0){ output1 += `<span>${num1}: ${factors.join(" x ")}</span><br><br>`; }
+            if (add == 1){ output1 += `<span>${num1}: ${factors.join(" x ")} + 1</span><br><br>`; }
+            if (add == -1){ output1 += `<span>${num1}: ${factors.join(" x ")} - 1</span><br><br>`; }
         }
-        output1 += `<strong>Required Numbers:</strong> ${data[variants[0]]["required_numbers"].join(", ")}<br><br>`;
+        output1 += `<strong>Required Numbers:</strong> ${data[variants[0]]["required_numbers"].join(", ")}`;
     }
 
     if (variants.length >= 2) {
@@ -72,11 +72,11 @@ function displayFactorization(data) {
             let factors = Array.isArray(factorization2[i]) ? factorization2[i] : [factorization2[i]];
             let add = 0;
             if (factors[factors.length - 1] === -1 || factors[factors.length - 1] === 1) {add = factors.pop(); }
-            if (add == 0){ output2 += `<p>${num2}: ${factors.join(" x ")}</p>`; }
-            if (add == 1){ output2 += `<p>${num2}: ${factors.join(" x ")} + 1</p>`; }
-            if (add == -1){ output2 += `<p>${num2}: ${factors.join(" x ")} - 1</p>`; }
+            if (add == 0){ output2 += `<span>${num2}: ${factors.join(" x ")}</span><br><br>`; }
+            if (add == 1){ output2 += `<span>${num2}: ${factors.join(" x ")} + 1</span><br><br>`; }
+            if (add == -1){ output2 += `<span>${num2}: ${factors.join(" x ")} - 1</span><br><br>`; }
         }
-        output2 += `<strong>Required Numbers:</strong> ${data[variants[1]]["required_numbers"].join(", ")}<br><br>`;
+        output2 += `<strong>Required Numbers:</strong> ${data[variants[1]]["required_numbers"].join(", ")}`;
     }
 
     if (variants.length >= 3) {
@@ -91,11 +91,11 @@ function displayFactorization(data) {
             let factors = Array.isArray(factorization3[i]) ? factorization3[i] : [factorization3[i]];
             let add = 0;
             if (factors[factors.length - 1] === -1 || factors[factors.length - 1] === 1) {add = factors.pop(); }
-            if (add == 0){ output3 += `<p>${num3}: ${factors.join(" x ")}</p>`; }
-            if (add == 1){ output3 += `<label>${num3}: ${factors.join(" x ")} + 1</label>`; }
-            if (add == -1){ output3 += `<p>${num3}: ${factors.join(" x ")} - 1</p>`; }
+            if (add == 0){ output3 += `<span>${num3}: ${factors.join(" x ")}</span><br><br>`; }
+            if (add == 1){ output3 += `<span>${num3}: ${factors.join(" x ")} + 1</span><br><br>`; }
+            if (add == -1){ output3 += `<span>${num3}: ${factors.join(" x ")} - 1</span><br><br>`; }
         }
-        output3 += `<strong>Required Numbers:</strong> ${data[variants[2]]["required_numbers"].join(", ")}<br><br>`;
+        output3 += `<strong>Required Numbers:</strong> ${data[variants[2]]["required_numbers"].join(", ")}`;
     }
 
     console.log("Output Elements:", document.getElementById("variant-plus"), document.getElementById("variant-minus"), document.getElementById("variant-equal"));
