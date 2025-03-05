@@ -61,6 +61,7 @@ button:hover {
     box-shadow: 0 0 10px rgba(145, 50, 50, 0.2);
     text-align: center;
     margin: 0px 0px;
+    overflow-y: auto;
 }
 
 .output1 p {
